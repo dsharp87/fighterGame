@@ -1,0 +1,11 @@
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\bin\Debug\netcoreapp2.0\oop_game.deps.json
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\bin\Debug\netcoreapp2.0\oop_game.runtimeconfig.json
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\bin\Debug\netcoreapp2.0\oop_game.runtimeconfig.dev.json
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\bin\Debug\netcoreapp2.0\oop_game.dll
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\bin\Debug\netcoreapp2.0\oop_game.pdb
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\obj\Debug\netcoreapp2.0\oop_game.csproj.CoreCompileInputs.cache
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\obj\Debug\netcoreapp2.0\oop_game.AssemblyInfoInputs.cache
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\obj\Debug\netcoreapp2.0\oop_game.AssemblyInfo.cs
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\obj\Debug\netcoreapp2.0\oop_game.dll
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\obj\Debug\netcoreapp2.0\oop_game.pdb
+C:\Users\Danny\Desktop\hcl_prep\practice_projects\oop_game\obj\Debug\netcoreapp2.0\oop_game.csprojAssemblyReference.cache
