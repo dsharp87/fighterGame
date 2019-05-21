@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace oop_game {
 
     //this is the parent class of all fighters so that methods have a commont type to target
@@ -9,11 +11,13 @@ namespace oop_game {
         public int dexterity = 3;
         public int health = 100;
         public bool isAlive = true;
-
+        public bool hasActed = false;
         public Human(string nameInput) 
         {
             name = nameInput;
         }
+        //think about how to impliment action list
+        public List<string> actionList;
 
         //constuctor
         public Human(string nameInput, int intel, int str, int dex, int hp)
@@ -48,6 +52,14 @@ namespace oop_game {
             System.Console.WriteLine("Strength = {0}", strength);
             System.Console.WriteLine("Dexterity = {0}", dexterity);
             System.Console.WriteLine("*****************************************************************");            
+        }
+
+        public void displayActions()
+        {
+            foreach(string actionName in actionList)
+            {
+
+            }
         }
     }
 }

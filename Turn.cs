@@ -9,8 +9,11 @@ namespace oop_game
     {
         //things i'd like to impliment
         //active and bench sections of roster that allow players to swap in and swap out fighters
-        //each active fighter gets 1 action, not sure if how to integrate swapping
-        //when all active fights have 
+        //at beging of turn, if bench is not full, check to see if there are alive figheter on bench to fill roster with
+        //player gets action count = number of alive fighters on bench
+        //each active fighter gets 1 action, using action causes that figher to be inactive and uses a player action point
+        //swapping a fighter to bench uses an action point and causes swapped in fighter to be inactive
+        //when player has used all actions, or has no more active/alive fighters in field, end turn
         public bool turnStatus = true;
         public Turn(Player currentPlayer, Player opponent)
         {
@@ -20,9 +23,16 @@ namespace oop_game
             while (turnStatus)
             {
                 //prompt for what type of action player should do
-                System.Console.WriteLine("What would you like to do?/n Press 1 to tell a fighter to act /n Press 2 to swap fights to and from bench /n Press 3 to end turn now");
+                
+                System.Console.WriteLine("What would you like to do?" + System.Environment.NewLine + "Press 1 to tell a fighter to act" + System.Environment.NewLine + "Press 2 to swap fights to and from bench." + System.Environment.NewLine + "Press 3 to end turn now");
                 string actionChoice = Console.ReadLine();
                 //end turn
+                while(actionChoice != "1" || actionChoice != "2" || actionChoice != "3")
+                {
+                    System.Console.WriteLine("Please enter the number coresponding to the action you would like to take.");
+                    System.Console.WriteLine("What would you like to do?" + System.Environment.NewLine + "Press 1 to tell a fighter to act" + System.Environment.NewLine + "Press 2 to swap fights to and from bench." + System.Environment.NewLine + "Press 3 to end turn now");
+                    actionChoice = Console.ReadLine();
+                }
                 if (actionChoice == "3")
                 {
                     turnStatus = false;
@@ -34,7 +44,7 @@ namespace oop_game
                     List<Human> availableFighters = new List<Human>();
                     foreach(Human figher in currentPlayer.roster)
                     {
-                        if(!figher.hasActed && figher.isAlive)
+                        if(figher.hasActed == false && figher.isAlive)
                         {
                             availableFighters.Add(figher);
                         }
@@ -42,13 +52,22 @@ namespace oop_game
                     //select which fighter will act
                     System.Console.WriteLine("Which fighter would you like to act?");
                     int counter = 1;
+                    string fighterChoice = "initialize variable";
+                    int fighetChoiceIdx = -1;
+                    while(!Int32.TryParse(fighterChoice, out fighetChoiceIdx || fighterChoice))
                     foreach(Human fighter in availableFighters)
                     {
                         System.Console.WriteLine(counter + " {0} - {1}", fighter.name, fighter.GetType().Name);
+                        counter++;
                     }
                     string fighterChoice = Console.ReadLine();
-                    //think about how to impliment action list
-
+                    //for each class, could have a list of actions strings
+                    //action prompt and execute method
+                    //current implimentation is to pass opponent bench to executeActon method, and have each class impliment it specific to their move set
+                    //started with ninja
+                    //I believe I have begun to generalize the method so that it doesn't need to be implimented specifically for each class
+                    //I think i would need to create a move type attribute for each class action, so that a generic function can call them
+                    //for instance attatcks require a target, heals heal self or friendly target, bench moves do bench swaps ect.
 
                 }
             }
