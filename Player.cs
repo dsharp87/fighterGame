@@ -9,6 +9,10 @@ namespace oop_game
         public string playerName;
         public List<Human> roster;
 
+        //active roster
+
+        //bench
+
         public bool isAlive = true;
 
         public Player()

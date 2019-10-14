@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace oop_game {
 
-    //this is the parent class of all fighters so that methods have a commont type to target
+    //this is the parent class of all fighters so that methods have a common type to target
     //human is abstract, and never meant to actually be created as a fighter type
     public abstract class Human {
         public string name;
@@ -54,6 +54,7 @@ namespace oop_game {
             System.Console.WriteLine("*****************************************************************");            
         }
 
+        //needs implimentations if this is to be generic for all classes
         public void displayActions()
         {
             foreach(string actionName in actionList)

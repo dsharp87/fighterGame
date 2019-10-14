@@ -26,9 +26,11 @@ namespace oop_game
 
         //escape move, not sure what purpose will be yet
         //perhaps an auto bench swap that doesn't use up action for turn
+        //NEEDS BENCH TARGET AS INPUT PARAMETER
         public void getAway()
         {
             health -= 15;
+            //BENCH SWAP FUNCTIONALITY HERE
             System.Console.WriteLine("{0} ran away, barely escaping alive.  {0} now has {1} health.", name, health);
             System.Console.WriteLine("*****************************************************************");
         }
@@ -48,8 +50,7 @@ namespace oop_game
                     actionIdx++;
                 }
                 System.Console.WriteLine("What do you choose?");
-                string actionChoice = Console.ReadLine();
-                
+                actionChoice = Console.ReadLine();  
             }
             
             
